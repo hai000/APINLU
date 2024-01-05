@@ -19,6 +19,7 @@ public class DKMHController {
 		int i = 0;
 		for (Subject subject : subjects) {
 			res[i] = new String[] { subject.getMa_MH(), subject.getName_subject(), subject.getNhom_to(),
+					subject.getTin_chi(),
 					subject.getNgayDangKyOrSLCL(), subject.getTkb(), subject.getIdMon() };
 
 			i++;

@@ -47,7 +47,7 @@ public class DKMHView extends ViewData implements ActionListener {
 	int i = 0;
 	TableRowSorter<DefaultTableModel> sorter;
 	JPanel searchPanel = new JPanel();
-	String[] columnNames = { "Mã MH", "Tên môn", "Nhóm MH", "STC","SL_CL", "TKB", "TBD","ID"};
+	String[] columnNames = { "Mã MH", "Tên môn", "Nhóm MH", "STC","SL_CL", "TKB","ID"};
 
 	public DKMHView() {
 		super();
@@ -106,7 +106,7 @@ public class DKMHView extends ViewData implements ActionListener {
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		table.setPreferredScrollableViewportSize(new Dimension(500, 400));
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 			TableColumn column = table.getColumnModel().getColumn(i);
 			column.setPreferredWidth(110);
 			if (i == 3 || i == 2) {
@@ -114,6 +114,8 @@ public class DKMHView extends ViewData implements ActionListener {
 			} else if (i == 1) {
 				column.setPreferredWidth(200);
 			} else if (i == 4) {
+				column.setPreferredWidth(55);
+			}else if(i==5) {
 				column.setPreferredWidth(260);
 			}
 
@@ -154,7 +156,7 @@ public class DKMHView extends ViewData implements ActionListener {
 				for (Integer i : selectedRows) {
 
 					JOptionPane.showMessageDialog(null,
-							DKMHController.getInstance().dkmh(String.valueOf(table.getValueAt(i, 5))));
+							DKMHController.getInstance().dkmh(String.valueOf(table.getValueAt(i, 6))));
 
 				}
 			} else {

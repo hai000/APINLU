@@ -48,6 +48,7 @@ public class APINLU {
 		post.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + token);
 		post.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
 		String payload = "{filter: {id_to_hoc: \"" + sub.getIdMon() + "\", is_checked: true, sv_nganh: 1}}";
+		System.out.println("Ban dang dki mon: " + sub);
 		try {
 			post.setEntity(new StringEntity(payload));
 			HttpEntity entity = client.execute(post).getEntity();

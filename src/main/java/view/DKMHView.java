@@ -172,7 +172,7 @@ public class DKMHView extends ViewData implements ActionListener {
 				for (Integer i : selectedRows) {
 
 					JOptionPane.showMessageDialog(null,
-							DKMHController.getInstance().huyDkmh(String.valueOf(table.getValueAt(i, 5))));
+							DKMHController.getInstance().huyDkmh(String.valueOf(table.getValueAt(i, 6))));
 
 				}
 			} else {
